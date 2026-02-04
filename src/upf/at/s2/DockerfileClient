@@ -1,0 +1,5 @@
+FROM amazoncorretto:21-alpine3.18-jdk
+COPY src /var/java
+WORKDIR /var/java
+RUN javac client2/*.java
+CMD ["java", "client2.ChatClient"]
